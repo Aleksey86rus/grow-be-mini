@@ -1,0 +1,17 @@
+@import "_fonts";
+@import "iconfont";
+body {
+  font-family: "Gilroy", sans-serif;
+}
+
+@import "_nullstyle";
+@import "_variable";
+@import "_blocks";
+@import "_page";
+
+// * ==== Все секции ===== * //
+@import "_header";
+@import "_seo";
+@import "_news";
+
+@import "_footer";

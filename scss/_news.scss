@@ -1,0 +1,116 @@
+.news {
+  &__subheading {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 151%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    max-width: 569px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: $mainColor;
+    margin-bottom: 55px;
+  }
+
+  &__card {
+    display: flex;
+    box-shadow: 15px 25px 60px -10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card {
+  &__image {
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 46px 30px 46px 30px;
+  }
+}
+.body {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__meta {
+  }
+
+  &__text {
+    font-weight: 500;
+    max-width: 340px;
+    font-size: 15px;
+    line-height: 147%;
+    color: $mainColor;
+    margin-bottom: 25px;
+  }
+
+  &__wrap-hyperlink {
+  }
+
+  &__hyperlink {
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 145%;
+    color: #000;
+
+    &:hover {
+      color: #f25822;
+    }
+  }
+}
+.meta {
+  &__list {
+    display: flex;
+    margin-bottom: 23px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 145%;
+    color: $colorText;
+    padding-left: 20px;
+    transition: all 0.3s ease 0s;
+    &_user {
+      background: url("./../image/user.svg") 0 0 / contain no-repeat;
+      &:hover {
+        color: #f25822;
+      }
+    }
+
+    &_love {
+      background: url("./../image/heart.svg") 0 0 / contain no-repeat;
+      &:hover {
+        color: #f25822;
+      }
+    }
+
+    &_message {
+      background: url("./../image/message.svg") 0 0 / contain no-repeat;
+      &:hover {
+        color: #f25822;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
