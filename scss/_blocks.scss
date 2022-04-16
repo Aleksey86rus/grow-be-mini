@@ -23,7 +23,7 @@
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: 24px;
   line-height: 117%;
@@ -76,4 +76,21 @@
   line-height: 158%;
   padding-top: 6px;
   margin-bottom: 34px;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 231%;
+  color: $mainColor;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: #f25822;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    padding: 0;
+  }
 }

@@ -142,14 +142,6 @@
   }
 
   &__link {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 231%;
-    color: $mainColor;
-    transition: all 0.3s ease 0s;
-    &:hover {
-      color: #f25822;
-    }
   }
 }
 .services {
@@ -164,6 +156,7 @@
 
   &__link {
     position: relative;
+    transition: all 0.3s ease 0s;
     &::before {
       content: "";
       position: absolute;
@@ -173,14 +166,6 @@
       height: 5px;
       background-color: #f25822;
       border-radius: 50%;
-    }
-
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 231%;
-    color: $mainColor;
-    &:hover {
-      color: #f25822;
     }
   }
 }
@@ -200,6 +185,7 @@
 
   &__link {
     color: $mainColor;
+    transition: all 0.3s ease 0s;
     &:hover {
       color: #f25822;
     }
@@ -234,21 +220,106 @@
   .footer {
     &__row {
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
+    }
+
+    &__column {
+      &_growbe {
+        display: flex;
+        flex: 0 0 40%;
+      }
+
+      &_company {
+        display: flex;
+        flex: 0 0 40%;
+        margin-bottom: 30px;
+      }
+
+      &_services {
+        display: flex;
+        flex: 0 0 40%;
+      }
+
+      &_contact {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 40%;
+      }
+    }
+  }
+
+  .growbe {
+    &__logo {
+      margin-bottom: 20px;
+    }
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  .footer {
+    &__row {
+      flex: 1 1 50%;
+      margin: 0 -30px;
+      justify-content: space-around;
+    }
+
+    &__column {
+      &_growbe {
+        display: flex;
+        flex: 0 0 30%;
+      }
+
+      &_company {
+        display: flex;
+        flex: 0 0 30%;
+      }
+
+      &_services {
+        display: flex;
+        flex: 0 0 30%;
+        margin-bottom: 30px;
+      }
+
+      &_contact {
+        display: flex;
+        flex: 0 0 30%;
+      }
     }
   }
 }
 
-@media (max-width: 470px) {
-  .seo {
-    &__image {
-      flex: 0 0 310px;
-      height: 225px;
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+@media (max-width: 450px) {
+  .footer {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__column {
+      &_growbe {
+        text-align: center;
       }
+      &_contact {
+        text-align: center;
+      }
+    }
+
+    .growbe {
+      &__list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .footer {
+      padding: 40px 0 19px;
     }
   }
 }
